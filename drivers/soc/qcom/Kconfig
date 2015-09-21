@@ -905,4 +905,11 @@ config QCOM_CX_IPEAK
 	  clients are going to cross their thresholds then Cx ipeak hw module will raise
 	  an interrupt to cDSP block to throttle cDSP fmax.
 
+config QCOM_WCNSS_CTRL
+	tristate "Qualcomm WCNSS control driver"
+	depends on QCOM_SMD
+	help
+	  Client driver for the WCNSS_CTRL SMD channel, used to download nv
+	  firmware to a newly booted WCNSS chip.
+
 source "drivers/soc/qcom/memshare/Kconfig"
