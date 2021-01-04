@@ -9,6 +9,7 @@ KBUILD_OPTIONS += CONFIG_QCA_WIFI_ISOC=0
 KBUILD_OPTIONS += CONFIG_QCA_WIFI_2_0=1
 KBUILD_OPTIONS += $(WLAN_SELECT)
 KBUILD_OPTIONS += $(KBUILD_EXTRA) # Extra config if any
+EXTRA_CFLAGS += -Wno-misleading-indentation # GCC6
 
 all:
 	$(MAKE) -C $(KERNEL_SRC) M=$(shell pwd) modules $(KBUILD_OPTIONS)
