@@ -1704,6 +1704,7 @@ EXTRA_CFLAGS += -Wno-misleading-indentation
 EXTRA_CFLAGS += -Wno-address-of-packed-member
 EXTRA_CFLAGS += -Wno-sizeof-pointer-div
 EXTRA_CFLAGS += -Wno-format-truncation
+EXTRA_CFLAGS += -Wno-bool-compare
 
 ifeq ($(call cc-option-yn, -Wheader-guard),y)
 EXTRA_CFLAGS += -Wheader-guard
